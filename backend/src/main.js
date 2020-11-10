@@ -3,8 +3,14 @@ const cors = require('cors');
 const morgan = require('morgan');
 const { PORT } = require('./config');
 const apiRouter = require('./api');
+const { connectToDatabase } = require('./db/connection');
 
 async function main() {
+  console.log('NODE_ENV:', process.env.NODE_ENV);
+
+  console.log('Connecting to database...');
+  await connectToDatabase();
+
   // create express instance
   const app = express();
 
