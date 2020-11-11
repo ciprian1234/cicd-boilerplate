@@ -6,8 +6,8 @@ docker build -f build.dockerfile -t build-react-app .
 
 # create cointainer copy build content and remove container
 docker create --name dummy build-react-app
-docker cp dummy:/frontend /projects/nginx/test
+docker cp dummy:/frontend/build ~/projects/nginx/cicd-boilerplate
 
 # cleanup
 docker rm -f dummy
-docker image rm build-react-app
+#docker image rm build-react-app
