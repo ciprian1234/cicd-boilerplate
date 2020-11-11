@@ -26,5 +26,6 @@ jobs:
             cd ~/projects/github/cicd-boilerplate
             git pull
             git status
+            chmod +x ./scripts/deploy-frontend.sh
             ./scripts/deploy-frontend.sh
             pwd
