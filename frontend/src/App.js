@@ -15,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <p>{JSON.stringify(data)}</p>
+      <p>Test deployment change: msg1</p>
     </div>
   );
 }
