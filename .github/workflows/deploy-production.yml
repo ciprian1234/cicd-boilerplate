@@ -21,7 +21,7 @@ jobs:
             host: ${{ secrets.SSH_SERVER }}
             port: ${{ secrets.SSH_PORT }}
             key: ${{ secrets.SSH_PRIVATE_KEY }}
-            username: c${{ secrets.SSH_USER }}
+            username: ${{ secrets.SSH_USER }}
             script: |
               cd ~/projects/github/cicd-boilerplate
               git pull
