@@ -23,6 +23,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           username: ${{ secrets.SSH_USER }}
           script: |
+            cd ~/projects/github/cicd-boilerplate
             pwd
             ./scripts/deploy.sh
             pwd
