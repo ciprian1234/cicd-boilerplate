@@ -4,7 +4,7 @@ import './App.css';
 
 let API_URL = 'http://localhost:4000/api';
 if (process.env.NODE_ENV === 'production') {
-  API_URL = 'http://cippau.go.ro/api/api';
+  API_URL = 'http://cippau.go.ro/cicd-boilerplate/api/api';
 }
 
 function App() {
