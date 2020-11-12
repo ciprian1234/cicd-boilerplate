@@ -8,7 +8,7 @@ rm -rf ~/projects/nginx/websites/cicd-boilerplate/*
 
 # create cointainer copy build content and remove container
 docker create --name dummy build-react-app
-docker cp dummy:/frontend/build ~/projects/nginx/websites/cicd-boilerplate
+docker cp dummy:/frontend/build/. ~/projects/nginx/websites/cicd-boilerplate
 
 # cleanup
 docker rm -f dummy
