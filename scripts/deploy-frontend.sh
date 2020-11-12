@@ -1,5 +1,7 @@
 #!/bin/bash
 
+pwd
+
 # create image for building react app
 docker build -f frontend/build.dockerfile -t build-react-app ./frontend
 
@@ -12,4 +14,6 @@ docker cp dummy:/frontend/build/. ~/projects/nginx/websites/cicd-boilerplate
 
 # cleanup
 docker rm -f dummy
-#docker image rm build-react-app
+
+# do not remove image to save build time
+#docker image rm build-react-app  

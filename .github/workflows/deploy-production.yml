@@ -23,7 +23,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           username: ${{ secrets.SSH_USER }}
           script: |
-            cd ~/projects/github/cicd-boilerplate
-            git pull
-            git status
+            ./scripts/before-deploy.sh
+            ./scripts/depoy-backend.sh
             ./scripts/deploy-frontend.sh
+            ./scripts/after-deploy.sh
