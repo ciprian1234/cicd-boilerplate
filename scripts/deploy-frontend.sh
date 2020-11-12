@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # create image for building react app
-cd frontend
-docker build -f build.dockerfile -t build-react-app .
+docker build -f frontend/build.dockerfile -t build-react-app ./frontend
 
 # create cointainer copy build content and remove container
 docker create --name dummy build-react-app
